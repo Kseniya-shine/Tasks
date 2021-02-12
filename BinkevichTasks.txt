@@ -1,0 +1,56 @@
+package com.company;
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);    //Задание 1
+        System.out.println("Задание 1" + '\n' + "Введите число.");
+        double number = sc.nextDouble();
+        if (number > 7) {
+            System.out.println("Привет");
+        }
+        sc.nextLine();
+        System.out.println();
+
+
+        System.out.println("Задание 2" + '\n' + "Введите имя.");    //Задание 2
+        String name = sc.nextLine();
+        if (name.equals("Вячеслав")) {
+            System.out.println("Привет, Вячеслав");
+        } else {
+            System.out.println("Нет такого имени");
+        }
+        System.out.println();
+
+
+        System.out.println("Задание 3" + '\n' + "Введите длину массива.");    //Задание 3
+        int size = sc.nextInt();
+
+        int[] array = new int[size];
+        System.out.println("Введите набор чисел.");
+        for (int i = 0; i < size; i++) {
+            array[i] = sc.nextInt();
+        }
+
+        System.out.print ("Введенный массив: ");
+        for (int i = 0; i < size; i++) {
+            System.out.print (array[i] + " ");
+        }
+        System.out.println();
+
+        System.out.print ("Элементы массива, кратные 3: ");
+        for (int i = 0; i < size; i++) {
+            if ((array[i] >= 3) && (array[i] % 3) == 0) {
+                System.out.print (array[i] + " ");
+            }
+        }
+        System.out.println();
+        sc.close();
+        System.out.println();
+
+        System.out.println("Задание 4" + '\n' + "Нет. Предпоследнюю скобку необходимо изменить " +    //Задание 4
+                "с “]” (закрывающая квадратная) на “)” (закрывающая круглая).");
+        System.out.println();
+        System.out.println("Все задания выполнены!");
+    }
+}
